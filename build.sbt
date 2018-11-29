@@ -5,5 +5,6 @@ organization := "com.sysgears.showcases"
 version := "1.0"
 
 libraryDependencies ++= Seq(
-  "com.google.inject" % "guice" % "4.2.2"
+  "com.google.inject" % "guice" % "4.2.2",
+  "org.clapper" %% "classutil" % "1.4.0"
 )

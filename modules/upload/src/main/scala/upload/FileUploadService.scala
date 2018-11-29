@@ -1,4 +1,4 @@
-package modules.upload
+package upload
 
 import com.google.inject.Inject
 import modules.shapes.HttpServer

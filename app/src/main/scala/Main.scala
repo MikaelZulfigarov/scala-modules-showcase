@@ -1,15 +1,15 @@
 import com.google.inject.Guice
 import modules.http.akka.AkkaHttpServerModule
 import modules.http.play.PlayHttpServerModule
-import modules.upload.{FileUploadModule, FileUploadService}
-
+import upload.{FileUploadModule, FileUploadService}
 object Main extends App {
+
   val akkaHttpServerModule = new AkkaHttpServerModule
   val playHttpServerModule = new PlayHttpServerModule
   val fileUploadModule = new FileUploadModule
 
   val injector = Guice.createInjector(
-    //playHttpServerModule,
+   // playHttpServerModule,
     //Switch to use
     akkaHttpServerModule,
     fileUploadModule

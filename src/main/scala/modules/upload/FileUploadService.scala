@@ -3,7 +3,9 @@ package modules.upload
 import com.google.inject.Inject
 import modules.shapes.HttpServer
 
-class FileUploadService @Inject() (httpServer: HttpServer) {
+trait FileUploadService
+
+class FileUploadServiceImpl @Inject() (httpServer: HttpServer) extends FileUploadService {
   httpServer.addEndpoint("/upload") {
     _ => //File upload logic
   }

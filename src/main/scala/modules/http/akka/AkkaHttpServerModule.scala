@@ -1,10 +1,10 @@
 package modules.http.akka
 
-import com.google.inject.AbstractModule
 import modules.shapes.HttpServer
+import net.codingwell.scalaguice.ScalaModule
 
-class AkkaHttpServerModule extends AbstractModule {
+class AkkaHttpServerModule extends ScalaModule {
   override def configure(): Unit = {
-    bind(classOf[HttpServer]).to(classOf[AkkaHttpServer])
+    bind[HttpServer].to[AkkaHttpServer]
   }
 }

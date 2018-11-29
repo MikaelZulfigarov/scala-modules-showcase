@@ -1,9 +1,9 @@
 package modules.upload
 
-import com.google.inject.AbstractModule
+import net.codingwell.scalaguice.ScalaModule
 
-class FileUploadModule extends AbstractModule {
+class FileUploadModule extends ScalaModule {
   override def configure(): Unit = {
-    bind(classOf[FileUploadService]).to(classOf[FileUploadServiceImpl])
+    bind[FileUploadService].to[FileUploadServiceImpl]
   }
 }

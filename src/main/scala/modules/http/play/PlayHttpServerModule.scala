@@ -1,10 +1,10 @@
 package modules.http.play
 
-import com.google.inject.AbstractModule
 import modules.shapes.HttpServer
+import net.codingwell.scalaguice.ScalaModule
 
-class PlayHttpServerModule extends AbstractModule {
+class PlayHttpServerModule extends ScalaModule {
   override def configure(): Unit = {
-    bind(classOf[HttpServer]).to(classOf[PlayHttpServer])
+    bind[HttpServer].to[PlayHttpServer]
   }
 }
